@@ -1,0 +1,8 @@
+{
+  "name": "heads-down",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "05c8b17b"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "heads-down",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
