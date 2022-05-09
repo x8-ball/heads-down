@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" >TIme: {{time_to_play-timerSecondsTotal}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="interval == null" >
+  <ion-item button (click)="runTimer()" >
+    <ion-label class="ion-text-center">Start</ion-label>
+  </ion-item>
+</ion-content>
+<ion-content *ngIf="interval != null" (click)="getCoordinates($event)">
+  <ion-text class="ion-text-center" color="secondary">
+    <h1>{{currentWord.text}}</h1>
+  </ion-text>
+  <ion-item button side="left" (click)="wrong()">
+    <ion-label class="ion-text-center">wrong</ion-label>
+  </ion-item>
+  <ion-item button side="right" (click)="right()">
+    <ion-label class="ion-text-center">ok</ion-label>
+  </ion-item>
+
+
+</ion-content>

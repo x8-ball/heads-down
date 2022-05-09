@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Data {{dataset}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-button color="secondary" expand="block" (click)="presentPicker()">Timer: {{timer.text}}</ion-button>
+  <ion-item button (click)="start()">
+    <ion-label class="ion-text-center">Start</ion-label>
+  </ion-item>
+</ion-content>
+
