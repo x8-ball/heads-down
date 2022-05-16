@@ -1,9 +1,6 @@
 [
-    { "text" : "wort1"},
-    { "text" : "wort2"},
-    { "text" : "wort3"},
-    { "text" : "wort4"},
-    { "text" : "wort5"},
-    { "text" : "wort6"},
-    { "text" : "wort7"}
+    { "name" : "Berufe"},
+    { "name" : "Bekannte Filme"},
+    { "name" : "Fiktionale Charaktere"},
+    { "name" : "Haushalt"}
 ]
