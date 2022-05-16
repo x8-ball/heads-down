@@ -1,19 +1,46 @@
-<ion-content fullscreen>
-  <ion-list>
-    <ion-item button (click)="openSetupWithDataset(1)">
-      <ion-label class="ion-text-center">Data 1</ion-label>
-    </ion-item>
-    <ion-item button (click)="openSetupWithDataset(2)">
-      <ion-label class="ion-text-center">Data 2</ion-label>
-    </ion-item>
-    <ion-item button (click)="openSetupWithDataset(3)">
-      <ion-label class="ion-text-center">Data 3</ion-label>
-    </ion-item>
-    <ion-item button (click)="openSetupWithDataset(4)">
-      <ion-label class="ion-text-center">Data 4</ion-label>
-    </ion-item>
-    <ion-item button (click)="openSetupWithDataset(5)">
-      <ion-label class="ion-text-center">Data 5</ion-label>
-    </ion-item>
-  </ion-list>
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides pager="true" centeredSlides="true" zoom="true" class="image-slider" loop="true" slidesPerView="1">
+    <ion-slide *ngFor="let dataset of data" >
+      <div button (click)="openSetupWithDataset(dataset)">
+        <ion-img style="text-align: center;" src="../../assets/data/{{dataset.name}}.jpeg" (click)="openSetupWithDataset(dataset)"></ion-img><img />
+        <h2>{{dataset.name}}</h2>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
+
+<style>
+  ion-slides.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ion-slides {
+    top: 25%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: block;
+  }
+
+  .swiper-slide h2 {
+    margin-top: 2.8rem;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ion-color-step-600, #60646b);
+  }
+
+  p b {
+    color: var(--ion-text-color, #000000);
+  }
+</style>
