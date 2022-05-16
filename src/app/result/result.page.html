@@ -1,14 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>result</ion-title>
+    <ion-title>Score: {{resultCount}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-list-header> Your result</ion-list-header>
   <ion-list >
-    <ion-item *ngFor="let result of results" [color]="result.status == 'right' ? 'success' : 'danger'" >
-      <ion-label class="ion-text-center">{{result.word.text}}</ion-label>
+    <ion-item *ngFor="let result of results" [color]="result.status == 'correct' ? 'success' : 'danger'" >
+      <ion-label class="ion-text-center">{{result.word}}</ion-label>
     </ion-item>
   </ion-list>
   <ion-item button (click)="restart()">
