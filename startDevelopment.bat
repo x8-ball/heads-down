@@ -1,2 +1,1 @@
-set NODE_OPTIONS=--openssl-legacy-provider
-npm run browser
+cmd /k execDev.bat
