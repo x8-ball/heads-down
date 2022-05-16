@@ -1,13 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Data {{dataset}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content fullscreen>
-  <ion-button color="secondary" expand="block" (click)="presentPicker()">Timer: {{timer.text}}</ion-button>
-  <ion-item button (click)="start()">
-    <ion-label class="ion-text-center">Start</ion-label>
-  </ion-item>
+  <ion-grid>
+    <ion-row>
+    <ion-col size="12" size-sm>
+      <div class="ion-text-center">
+        <h3>{{dataset.name}}</h3>
+      </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm>
+          <ion-button color="secondary" expand="block" (click)="presentPicker()">Timer: {{timer.text}}</ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm text-center>
+        <div class="center" button (click)="start()">
+          <h2>
+            <ion-label color="success">
+              Start
+            </ion-label>
+          </h2>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<style>
+    .center {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  ion-content {
+    position: absolute;
+    top: 35%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
 
+</style>
