@@ -1,8 +1,8 @@
 <ion-content fullscreen class="ion-padding" scroll-y="false">
   <ion-slides pager="true" centeredSlides="true" zoom="true" class="image-slider" loop="true" slidesPerView="1">
     <ion-slide *ngFor="let dataset of data" >
-      <div button (click)="openSetupWithDataset(dataset)">
-        <ion-img style="text-align: center;" src="../../assets/data/{{dataset.name}}.jpeg" (click)="openSetupWithDataset(dataset)"></ion-img><img />
+      <div button (click)="openSetupWithDataset(dataset)" style="height: 100%">
+        <ion-img style="text-align: center; height: 50%;max-height: 50%;" src="../../assets/data/{{dataset.name}}.jpeg" (click)="openSetupWithDataset(dataset)"></ion-img><img />
         <h2>{{dataset.name}}</h2>
       </div>
     </ion-slide>
