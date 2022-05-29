@@ -8,7 +8,7 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./main.page.scss'],
 })
 
-export class MainPage implements OnInit {
+export class MainPage {
   slideOpt ={
     direction: 'vertical',
     slidesPerView: 2,
@@ -17,6 +17,7 @@ export class MainPage implements OnInit {
     }
   }
   data :any;
+
   showData(datanumber){
     alert(datanumber);
   }
@@ -28,8 +29,6 @@ export class MainPage implements OnInit {
     });
   }
     //throw new Error('Method not implemented.');
-  }
-
   openSetupWithDataset(dataset) {
     let navigationExtras: NavigationExtras = {
       state: {
