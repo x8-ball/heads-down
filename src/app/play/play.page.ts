@@ -10,7 +10,9 @@ import { Platform } from '@ionic/angular';
 })
 
 export class PlayPage implements OnInit {
-  
+  playing: boolean = false;
+
+  color = "black";
   spacing = 0.15; 
 
   correctSoundPath = 'assets/audio/correct.wav';
@@ -79,6 +81,8 @@ export class PlayPage implements OnInit {
       }
 
     }, 1000);
+    setTimeout(() => { this.playing = true; }, 300);
+    
   }
   showResult(){
     clearInterval(this.interval);
@@ -107,6 +111,7 @@ export class PlayPage implements OnInit {
   }
 
   toggleCheck(){
+    if(!this.playing) return false;
     var currentTickTimestamp = Date.now()
     var delta = currentTickTimestamp - this.lastPressedAnswer;
     if(delta >= 500){
@@ -131,10 +136,16 @@ export class PlayPage implements OnInit {
   wrong(){
     this.playSound(this.wrongSoundPath);
     this.addWord("wrong");
+    this.changeBackground("red");
   }
   correct(){
     this.playSound(this.correctSoundPath);
     this.addWord("correct");
+    this.changeBackground("green");
+  }
+  changeBackground(color){
+    this.color = color;
+    setTimeout(() => { this.color = "black"; }, 400);
   }
   addWord(status){
     this.result.push({
