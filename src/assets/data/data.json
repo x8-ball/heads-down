@@ -2,5 +2,6 @@
     { "name" : "Berufe"},
     { "name" : "Bekannte Filme"},
     { "name" : "Fiktionale Charaktere"},
-    { "name" : "Haushalt"}
+    { "name" : "Haushalt"},
+    { "name" : "Charade"}
 ]
